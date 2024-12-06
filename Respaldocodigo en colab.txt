@@ -1,0 +1,3 @@
+Enlace de respaldo del código del proyecto IA energía eléctica:
+
+https://colab.research.google.com/drive/1irCiVeJicqp3WLweZJrp9Xq34ZN1Hfgt?usp=sharing
