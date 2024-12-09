@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIEnergia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Proyecto REIA (Red de Energía Inteligente Asistida)</h1>
+    </header>
+
+    <section>
+        <h2 class="subtitulo">Descripción del proyecto</h2>
+        <p class="parrafo">Modelo con datos abiertos de energía a nivel poblacional
+             (Departamental, municipal, Estatal) que proyecta, pronóstica y planifica sobre las decisiones de generación, conexión y alcance de la energía en  base a sus capacidades de generación de PIB, población, consumo de energético, generación de la misma y tipo de actividades económicas..</p>
+        <h2 class="subtitulo">Alcance del proyecto</h2>
+        <p class="parrafo">Ayudar a la toma de decisiones de infraestructura de transporte eléctrico, decisiones en caso de razonamiento, disponer de datos y tablas, optimización del consumo de energía y optimización en la producción de PIB y Pronosticar el uso futuro de gasto..</p>
+        <h2 class="subtitulo"> Objetivo General</h2>
+        <p class="parrafo">Optimizar la gestión energética en Colombia mediante el uso de inteligencia artificial (IA), implementando el modelo REIA para prever consumos, priorizar distribuciones, y mejorar la eficiencia de la red energética nacional, garantizando sostenibilidad ambiental y económica.</p>
+        <h2 class="subtitulo"> Objetivos Específicos</h2>
+        <p class="parrafo">Optimización del Consumo Energético
+            Implementar modelos de redes neuronales para pronosticar el consumo energético en tiempo real, considerando variables como población, actividad económica, infraestructura de red, y distancia a centrales eléctricas.
+            Priorización Energética
+            Desarrollar un sistema basado en el coeficiente YANE para identificar las regiones que más dependen de la energía para la generación de recursos económicos (PIB) y garantizar su acceso prioritario.
+            Sostenibilidad Ambiental
+            Reducir el impacto ambiental mediante una mejor planificación del uso de plantas térmicas a base de hidrocarburos, disminuyendo su operación innecesaria y promoviendo la integración de fuentes renovables en la red.
+            Optimización de la Infraestructura
+            Analizar y proponer mejoras en las conexiones de la red energética para reducir pérdidas y aumentar la eficiencia en la distribución.
+            Reducción de Crisis Energéticas
+            Prevenir futuras crisis energéticas mediante la generación de escenarios predictivos y recomendaciones basadas en análisis de datos históricos y actuales.
+            Gestión Oportuna de Recursos Públicos
+            Minimizar los costos asociados al mantenimiento de centrales eléctricas en poco o nulo funcionamiento, garantizando un uso eficiente de los recursos públicos.
+            Transparencia y Acceso a la Información
+            Establecer un sistema que permita a los tomadores de decisiones acceder a predicciones y análisis de manera transparente y comprensible, promoviendo una gestión energética más efectiva.
+            Promoción de la Inclusión Energética
+            Identificar y cerrar brechas energéticas en comunidades vulnerables, asegurando un acceso equitativo a la energía como motor de desarrollo social y económico.
+            Cumplimiento Normativo
+            Asegurar que el modelo REIA y las herramientas desarrolladas cumplan con las leyes y marcos éticos relacionados con la protección de datos, sostenibilidad y eficiencia energética.
+            Educación y Conciencia
+            Generar campañas de concienciación y educación para que las comunidades comprendan la importancia de la optimización energética y su impacto en la 
+            economía y el medio ambiente.
+            </p>
+        <h2 class="subtitulo"> Resultados Esperados</h2>
+        <p class="parrafo">Reducción de costos operativos y ambientales en la gestión energética.
+            Mayor equidad en el acceso a la energía para las diferentes regiones del país.
+            Planificación energética basada en datos, con recomendaciones claras para el gobierno y las empresas del sector.
+            Contribución significativa a los Objetivos de Desarrollo Sostenible (ODS), específicamente en energía asequible y no contaminante.
+            Este conjunto de objetivos busca establecer un enfoque integral para transformar la gestión energética en Colombia y servir como modelo replicable para otros países con desafíos similares.
+            </p>
+        <h2 class="subtitulo"> Marco referencial</h2>
+        <p class="parrafo">El marco referencial para el diseño e implementación de una inteligencia artificial combinacional orientada a la gestión energética y económica se estructura en torno a los datos específicos suministrados. Estos datos permiten generar modelos predictivos y de optimización que prioricen el desarrollo sostenible, la eficiencia energética y la equidad en la distribución de recursos.
+
+            1. Variables Clave del Modelo
+            El sistema debe considerar las siguientes variables y su interacción para construir el marco de referencia:
+            Municipio
+            Unidad territorial para el análisis de datos. Permite segmentar y comparar regiones.
+            PIB per cápita y PIB bruto (en millones de COP)
+            Indicadores económicos clave para evaluar el desarrollo y productividad del municipio.
+            KW per cápita y Eficiencia Energética
+            Determinan el consumo energético promedio por habitante y la capacidad del municipio para transformar energía en valor económico.
+            Coeficiente YANE
+            Métrica central del modelo. Evalúa de 0 a 100 la dependencia de un municipio de la energía para la generación de recursos económicos (PIB).
+            Población
+            Permite dimensionar la demanda energética, identificando áreas con mayor concentración de habitantes.
+            Consumo Promedio Mensual de Energía (kWh)
+            Indicador de la necesidad energética local para uso doméstico, comercial e industrial.
+            Distancia a la Central Eléctrica Más Cercana (km)
+            Influye en los costos de distribución y las pérdidas energéticas durante el transporte.
+            Tipo de Energía
+            Clasificación de las fuentes principales (e.g., hidroeléctrica, térmica, solar).
+            % Energía Limpia vs. % Energía Sucia
+            Indicadores de sostenibilidad ambiental en el uso de recursos energéticos.
+            % del PIB Nacional
+            Cuota del municipio en la economía nacional. Ayuda a evaluar su relevancia económica.
+            Actividades Económicas Principales
+            Información contextual sobre las industrias y sectores que impulsan la economía local.
+            .</p>
+        <h2 class="subtitulo">  Uso del Coeficiente YANE</h2>
+        <p class="parrafo">El Coeficiente YANE es el eje central para priorizar el acceso a recursos energéticos. Este coeficiente se calcula con base en las siguientes relaciones:
+            Dependencia de la energía para la generación de ingresos locales (PIB per cápita / KW per cápita).
+            Ponderación de la eficiencia energética para reducir desperdicios.
+            Priorización de las actividades económicas más relevantes.
+            </p>
+        <h2 class="subtitulo"> RIESGOS DEL PROYECTO</h2>
+        <p class="parrafo">Riesgos del Proyecto
+
+
+            Riesgos Técnicos
+            Calidad y Disponibilidad de Datos: La precisión del modelo depende en gran medida de la calidad y cantidad de datos recolectados. Datos incompletos o incorrectos pueden afectar las predicciones.
+            Complejidad Técnica: La integración de múltiples sistemas y fuentes de datos puede generar problemas de compatibilidad y retrasos.
+            Fallas de Infraestructura: Dependencia de servidores en la nube puede llevar a problemas de conectividad o limitaciones en la capacidad.
+            Riesgos Financieros
+            Sobrecostos: Cambios en el alcance o retrasos en las fases podrían incrementar significativamente los costos.
+            Inversiones Iniciales Elevadas: Los costos iniciales en infraestructura y talento especializado pueden representar una barrera.
+            Riesgos Organizacionales
+            Capacitación del Personal: Falta de experiencia en el uso de modelos de IA puede dificultar la adopción.
+            Resistencia al Cambio: Actores clave podrían mostrar resistencia a la implementación de un sistema automatizado.
+            Riesgos Ambientales y Sociales
+            Impacto en las Comunidades: La priorización energética basada en el coeficiente YANE podría no beneficiar a todas las comunidades por igual, generando posibles conflictos.
+            Cumplimiento Normativo: Incumplimiento de regulaciones relacionadas con la sostenibilidad energética y protección de datos.
+            Riesgos de Implementación
+            Fallos en la Prueba Piloto: Si los municipios seleccionados para la prueba piloto no representan adecuadamente la población total, los resultados pueden ser inexactos.
+            Tiempo de Implementación: Retrasos en alguna fase del cronograma pueden afectar el despliegue general.
+            Riesgos Éticos
+            Privacidad y Seguridad de Datos: La recopilación y almacenamiento de datos poblacionales y económicos debe cumplir estrictamente con las leyes de protección de datos.
+            </p>
+        <h2 class="subtitulo"> Recolección de datos</h2>
+        <p class="parrafo">Las siguientes son todas las fuentes de donde se han sacado datos:
+
+            Colombia Histórica
+            Energía hidroeléctrica en Antioquia: Retos y Oportunidades para un ...
+            September 22, 2024 — 1. Energía limpia: Ahora, no todo es malo. Una vez construida, la energía hidroeléctrica es una fuente muy limpia. Sin emisiones de carbono. Y eso es un gran sí. Porque mira, en tiempos donde la lucha…
+            Atlas Renewable Energy
+            La hoja de ruta colombiana: camino hacia una matriz energética más ...
+            June 16, 2024 — Colombia avanza hacia las energías limpias con la hoja de ruta de la Transición Energética Justa. Es un camino de retos y oportunidades. La meta es alcanzar un desarrollo justo y sostenible para todos…
+            La República
+            Los departamentos de La Guajira, Cesar y Antioquia destacan en ...
+            February 18, 2020 — LOS CONTRASTES. La energía eólica ha encontrado su foco principal en La Guajira. Entre los parques eólicos ubicados en dicho departamento se cuentan el Jepírachi, el primero que se construyó en el paí...
+            El Tiempo
+            La energía y su potencial en Antioquia - El Tiempo
+            December 25, 2013 — La energía, una 'mina de oro' en Antioquia . El energético es uno de los clúster más dinámicos de Medellín. VÍCTOR ANDRÉS ÁLVAREZ C. 26 de diciembre 2013, …
+            El Colombiano
+            Antioquia, a ampliar sus opciones energéticas - El Colombiano
+            En 2022, Antioquia generará el 70 % de la energía del país, a través de centrales hidroeléctricas, según EPM. ... Por esta razón, el país y la región deben pensar en otras fuentes …
+            
+            
+            El Colombiano
+            Energía solar, una tendencia que crece en Antioquia - El Colombiano
+            Consumir este tipo de energía renovable no convencional es una tendencia que crece en Antioquia y es posible en pocos pasos: acercarse a una empresa que brinde servicios de ingeniería solar; un ...
+            Genmas
+            Inicio - Gen+
+            La Empresa de Generación y Promoción de Energía de Antioquia S.A. E.S.P. GEN+ es una sociedad anónima, empresa de servicios públicos, constituida el 6 de noviembre de 2008 como una alianza entre el se…
+            La República
+            En junio, Antioquia fue la región que más aportes hídricos hizo al ...
+            Además, destacan que durante el mes se presentaron vertimientos de 533.62 GWh en Antioquia. En promedio, durante el mes de mayo la generación de energía fue de 193.48 GWh-día, 0.38% por debajo de lo r…
+            Colombia Visible
+            Antioquia busca la eficiencia energética a 2040 para enfrentar la ...
+            Una de las soluciones a los desafíos climáticos como la deforestación, la mala calidad del aire de los municipios y ciudades, y la pérdida de biodiversidad en el territorio, es transitar hacia el uso…
+            COMITE COLOMBIANO DE LA CIER
+            Antioquia trabaja para generar el 70% de la energía del país - COCIER
+            Antioquia trabaja para generar el 70% de la energía del país. Antioquia le sigue botando corriente a la producción de energía. “El que tenga energía en el futuro será el que mande la parada en desarro…
+            Biblioteca Digital UdeA
+            PANORAMA ACTUAL DE LA GENERACIÓN HIDRÁULICA EN COLOMBIA Y ANTIOQUIA ...
+            2 Cita (Tamayo Rincón, 2022) Referencia Estilo APA 7 (2020) Tamayo Rincón, M. A. (2022). Panorama actual de la generación hidráulica en Colombia y Antioquia ante el crecimiento de la demanda de energí…
+            Semana
+            Región caribe: potencial en energía eólica, solar e hidrógeno verde
+            Aprovechar su potencial en la producción de energía solar, eólica e hidrógeno verde solo será posible de la mano de las comunidades. Estos son
+            Cámara de Comercio de Medellín
+            Estructura Empresarial 2023 - camaramedellin.com.co
+            January 29, 2024 — En este informe se presenta la caracterización de las empresas localizadas en los 69 municipios de la jurisdicción de la Cámara de Comercio de Medellín para Antioquia, matriculadas y renovadas en 2023...
+            Idea.gov
+            Resultados del Producto Interno Bruto (PIB) y empleo de Antioquia 2022
+            July 16, 2023 — NoticiasResultados del Producto Interno Bruto (PIB) y empleo de Antioquia 2022. En cuanto al valor del PIB de Antioquia, pasó de $137 billones en 2021 a $147 billones en 2022 y el ingreso percápita en…
+            Lifeder
+            Economía de Antioquia: Actividades y Sectores Principales - Lifeder
+            December 14, 2022 — Principales actividades económicas de Antioquia. Este es uno de los departamentos más populares y con mayor producción del país. Este éxito se lo deben en gran parte a la diversificación de fuentes de…
+            Dane
+            Cuentas nacionales departamentales: PIB por departamento
+            Para 2023 pr, el PIB nacional es 1.572.458 miles de millones de pesos, a precios corrientes. Los departamentos con mayor PIB son Bogotá D.C. y Antioquia con 393.237 y 231.052 miles de millones de peso…
+            Geoportal
+            Geovisor Valor Agregado por Municipio - Base 2015 - DANE
+            Contáctenos. Es el resultado de la distribución (entre los municipios) de los valores agregados departamentales, de las diferentes actividades económicas, divulgados en las “Cuentas Departamentales” d…
+Wikipedia, la enciclopedia libre
+Anexo : Municipios de Colombia por Producto Interno Bruto
+Anexo. : Municipios de Colombia por Producto Interno Bruto. La siguiente tabla muestra el producto interno bruto (PIB) de los municipios de Colombia de acuerdo a las cifras proporcionadas por el Depar…
+Inicio | Cámara de Comercio de Medellín
+DESEMPEÑO ECONOMÍA DE ANTIOQUIA 2021 - camaramedellin.com.co
+acional de Estadís. ica, 2021a) 2.2. DESEMPEÑO REGIONALEl crecimiento proyectado por la Cámara de Comercio de Medellín para Antioquia para la economía regional era de 6 % para 2021; sin embargo, de ac...
+todacolombia.com
+Economía Departamento de Antioquia - Toda Colombia
+A nivel departamental los sectores de mayor importancia son industria manufacturera con el 12,47%, comercio con el 8,55%, actividades de servicios a las empresas excepto servicios financieros e inmobi…
+MINCIT
+1.5cm Perfiles Económicos Departamentales Departamento de Antioquia
+Aspectos generales del departamento de Antioquia Número municipios: 125 Extensión territorial: 63.612 km2 Población (2022(p)): 6.787.846 habitantes Participación en la población total (2022(p)): 13,1%...
+
+
+MINCIT
+MINCIT - Ministerio de Comercio, Industria y Turismo
+Antioquia. Septiembre 2024. Agosto 2024. Julio 2024. Junio 2024. Mayo 2024. Abril 2024. Marzo 2024. Febrero 2024. Enero 2024. Arauca. Septiembre 2024. Agosto 2024. Julio 2024 ... Los informes presenta…
+Universidad de Antioquia
+Boletín Económico Municipal
+Antioquia y sus municipios como en el país en general, es importante seguir realizando un ... de las actividades económicas y positivas perspectivas de crecimiento para los años 2022 y de allí en adel…
+Universidad de Antioquia
+Boletín Económico Municipal - UdeA
+1. PIB MUNICIPAL. En el municipio de Andes el Producto Interno Bruto se contrajo en el año 2020 en un 3,9%, porcentaje inferior a la caída presentada en la subregión del suroeste 4,26% y menor también…
+Universidad de Antioquia
+Boletín Económico Municipal - UdeA
+En el municipio de Turbo se reporta un aumento de 111 puestos de trabajo al corte de agosto de 2021, lo que representa el 0,23% del total de empleos que no se tenían en el municipio en 2019. Fuente: E…
+Universidad de Antioquia
+Boletín Económico Municipal
+municipios del Norte es el catorceavo municipio en orden de las mayores tasas de desempleo de la subregión con una tasa del 7,32% (Gráﬁco 2). Fuente: ECV de Antioquia y GEIH, cálculos propios. Fuente:...
+ArcGIS Experience
+Experience - ArcGIS
+Participación de las actividades económicas en los municipios respecto a los departamentos 2022p; Valor agregado y actividades económicas - municipios (2021 provisional - 2022 provisional) Open in a n…
+Antioquia Government
+Cuentas Económicas del Departamento de Antioquia Planeación
+Cuentas económicas del Departamento de Antioquia, de los años 2005 al 2017. Boletín Cuentas Económicas 2017 Preliminar. PIB 2017. Producto Interno Bruto Provincias de Antioquia 2016. Cuentas económica…
+Antioquia Government
+Estadísticas e Indicadores - Gobernación de Antioquia
+Inicio. La Dirección de Sistemas de Indicadores (DSI) adscrita al Departamento Administrativo de Planeación (DAP), es la encargada de procesar y analizar información estadística que dé cuenta del desa…
+Antioquia Datos
+Fichas Municipales – Portal
+Gobernación de Antioquia. Horario: lunes a jueves de 7:30 a. m. a 12:00 m. y de 1:30 p. m. a 5:15 p. m.; y los viernes de 7:30 a. m. a 12:00 m. y de 1:30 p. m. a 4:00 p. m. Dirección: Calle 42B Número…
+
+
+Antioquia Datos
+Santa Fe de Antioquia - antioquiadatos.gov.co
+3. El componente financiero muestra la situación financiera y económica de los municipios durante la vigencia anterior (enero 01 a diciembre 31) en éste se encuentran las actividades económicas del mu…
+Ctpantioquia
+SUBREGIÓN NORTE DE ANTIOQUIA PERFIL DE DESARROLLO SUBREGIONAL Presentaci
+Fuente: Gobernación de Antioquia (2020) – Elaboración: Equipo de trabajo 2.4 Características económicas La Subregión Norte, sobresale por sus actividades económicas rurales de economía campesina, de l…
+Ctpantioquia
+SUBREGIÓN MAGDALENA MEDIO DE ANTIOQUIA PERFIL DE DESARROLLO SUBREGIONAL ...
+Para el 2020 la subregión Magdalena Medio cuenta con uno (1) de los 56 resguardos del Departamento de Antioquia, localizado en el
+DANE: https://www.dane.gov.co/
+Gobernacion de Antioquia: https://www.antioquia.gov.co/
+Periódico El Suroeste: https://www.periodicoelsuroeste.com
+Antioquia en datos: https://www.antioquiadatos.gov.co/wp-content/uploads/2022/07/Fichas-municipales-estadisticas/FICHAS%20MUNICIPALES%202019%20-%202020/C%C3%A1ceres.pdf
+Wikipedia: https://es.wikipedia.org/wiki/Anexo:Municipios_de_Colombia_por_Producto_Interno_Bruto
+
+
+
+
+
+
+
+Links
+Carpeta pública:
+https://drive.google.com/drive/u/1/folders/1VESf_6yr9Hl4sOFnH1WT_xiff_WNr5iZ
+
+Git:
+https://github.com/camilomedinag1/AI_energia_antioquia
+
+
+            </p>
+        <h2 class="subtitulo"> AGRADECIMIENTOS</h2>
+        <p class="parrafo">Agradecer a todos los docentes por su gran apoyo y colaboración durante la ejecución del BOOTCAMP De Talento TEch</p>
+        <h2 class="subtitulo"> SCRUM PROYECTO</h2>
+        <p class="parrafo">https://docs.google.com/document/d/1AkioeVQLlbN73kRC-Us0ZXrR3uYFZn8Rqq5QjSKHfZw/edit?tab=t.0#heading=h.pebezugxmul3</p>
+        <h2 class="subtitulo"> App Hunch</h2>
+        <p class="parrafo">https://docs.google.com/document/d/1HO0Z2nBugtnCgYuaOHsjn5prBwpeCNeqr6o9DJfg-eM/edit?tab=t.0</p>
+        <h2 class="subtitulo"> Datos Consumo Energía Antioquia</h2>
+        <p class="parrafo">https://docs.google.com/spreadsheets/d/1f5C-TTtaoTbVlO2LZDUWEuDxtzwcdHQ155tLBjBnfZU/edit?gid=0#gid=0</p>
+        <h2 class="subtitulo"> Formato Canvas</h2>
+        <p class="parrafo">https://docs.google.com/spreadsheets/d/1SkaWUkUsr_o-TTz5KWIfpJYoOccI_wwN/edit?gid=843870175#gid=843870175</p>
+        <h2 class="subtitulo"> modelo reino unido</h2>
+        <p class="parrafo">Otro párrafo adicional para que veas cómo se ve el texto.</p>
+        <h2 class="subtitulo"> CAMILO ALEXANDER MOLINA GALEANO</h2>
+        <h3 class="subtitulo"> EMMANUEL BOLIVAR TORRES</h3>
+        <h3 class="subtitulo"> RICARDO OSSA GALLEGO</h3>
+        <h3 class="subtitulo"> CESAR AUGUSTO MARIN DELGADO</h3>
+        <h3 class="subtitulo"> IA Gestion de energia REIA</h3>
+        <h3 class="subtitulo"> https://docs.google.com/document/d/10Xk4YcEfP7srKsQo8_LtLHc2qKZsR2e2Z0V7n4f93E4/edit?tab=t.0</h3>
+       
+        
+    </section>
+</body>
+</html>

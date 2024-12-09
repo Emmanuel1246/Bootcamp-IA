@@ -1,0 +1,94 @@
+/* Estilos básicos del sitio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #005fa6;
+    margin-bottom: 10px;
+}
+
+/* Título principal */
+.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Subtítulos */
+.subtitulo {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #003f66;
+}
+
+/* Párrafos */
+.parrafo {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Estilo de las secciones */
+section {
+    margin-bottom: 40px;
+}
+
+/* Añadir un color de fondo al header */
+header {
+    background-color: #003f66;
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Agregar un borde de separación */
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Estilos para el enlace */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.3rem;
+    }
+
+    .parrafo {
+        font-size: 0.9rem;
+    }
+}
